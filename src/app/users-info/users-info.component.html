@@ -1,0 +1,25 @@
+<div class="tbUser">
+  <table class="tab" *ngIf="users$ | async as users">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>UserName</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+
+    <tr *ngFor="let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.phone}}</td>
+    </tr>
+  </table>
+
+  <!--  <ul *ngIf="users$ | async as users">-->
+  <!--    <li *ngFor=" let user of users" ;>-->
+  <!--      {{user.name}}-->
+  <!--  </ul>-->
+
+</div>
